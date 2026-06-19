@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-weg-yellow text-weg-dark font-semibold px-8 py-3 rounded-full 
+           hover:bg-yellow-400 transition-all duration-300 
+           transform hover:scale-105 hover:shadow-lg
+           active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-weg-yellow text-weg-yellow font-semibold px-8 py-3 rounded-full 
+           hover:bg-weg-yellow hover:text-weg-dark transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-white mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-300 max-w-2xl mx-auto;
+  }
+
+  .card-hover {
+    @apply bg-gradient-to-br from-weg-gray to-weg-dark rounded-2xl p-6 
+           border border-gray-700 hover:border-weg-yellow 
+           transition-all duration-300 transform hover:-translate-y-2
+           hover:shadow-2xl hover:shadow-weg-yellow/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-weg-yellow to-yellow-300 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,110 @@
+import { Phone, Mail, MapPin, Globe, MessageCircle, Briefcase } from 'lucide-react';
+
+const Footer = () => {
+  return (
+    <footer className="bg-weg-dark border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand */}
+          <div>
+            <div className="mb-6">
+              <img
+                src="/logo-macias.png"
+                alt="Macias Eletrotécnica"
+                className="h-32 w-auto"
+              />
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              Especialistas em comércio, locação e manutenção de equipamentos elétricos industriais.
+            </p>
+            <div className="flex gap-4">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-weg-yellow hover:text-weg-dark text-gray-400 transition-all">
+                <Globe size={18} />
+              </a>
+              <a href="https://wa.me/551735249700" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-500 hover:text-white text-gray-400 transition-all">
+                <MessageCircle size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-weg-yellow hover:text-weg-dark text-gray-400 transition-all">
+                <Briefcase size={18} />
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-white font-bold mb-6">Serviços</h4>
+            <ul className="space-y-3">
+              {['Manutenção de Motores', 'Transformadores', 'Máquinas de Solda', 'Geradores', 'Locação de Equipamentos'].map((item, idx) => (
+                <li key={idx}>
+                  <a href="#servicos" className="text-gray-400 text-sm hover:text-weg-yellow transition-colors">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Products */}
+          <div>
+            <h4 className="text-white font-bold mb-6">Produtos</h4>
+            <ul className="space-y-3">
+              {['Motores WEG', 'Motores Bosch', 'Ferramentas Makita', 'Peças e Acessórios', 'Rolamentos'].map((item, idx) => (
+                <li key={idx}>
+                  <a href="#produtos" className="text-gray-400 text-sm hover:text-weg-yellow transition-colors">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-white font-bold mb-6">Contato</h4>
+            <ul className="space-y-4">
+              <li>
+                <a href="tel:+551735249700" className="flex items-center gap-3 text-gray-400 hover:text-weg-yellow transition-colors">
+                  <Phone size={16} />
+                  <span>(17) 3524-9700</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contato@maciaseletro.com.br" className="flex items-center gap-3 text-gray-400 hover:text-weg-yellow transition-colors">
+                  <Mail size={16} />
+                  <span>contato@maciaseletro.com.br</span>
+                </a>
+              </li>
+              <li className="flex items-start gap-3 text-gray-400">
+                <MapPin size={16} className="mt-1 flex-shrink-0" />
+                <span>Catanduva, SP - Brasil</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Partners */}
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
+            <span className="text-gray-500 text-sm">Parceiros Autorizados:</span>
+            <span className="text-gray-400 font-semibold">WEG</span>
+            <span className="text-gray-400 font-semibold">BOSCH</span>
+            <span className="text-gray-400 font-semibold">MAKITA</span>
+            <span className="text-gray-400 font-semibold">BAMBOZZI</span>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-8 pt-8 border-t border-gray-800 text-center">
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} Macias Eletrotécnica. Todos os direitos reservados.
+          </p>
+          <p className="text-gray-600 text-xs mt-2">
+            Sediada em Catanduva/SP - Atendemos TODO O BRASIL
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
