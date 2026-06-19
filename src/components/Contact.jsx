@@ -24,9 +24,15 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Telefone',
+      title: 'Telefone Matriz',
       content: '(17) 3524-9700',
       link: 'tel:+551735249700'
+    },
+    {
+      icon: Phone,
+      title: 'Telefone Filial',
+      content: '(17) 3522-3312',
+      link: 'tel:+551735223312'
     },
     {
       icon: Mail,
@@ -36,8 +42,14 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: 'Endereço',
-      content: 'Catanduva, SP - Brasil',
+      title: 'Matriz',
+      content: 'Rua Rosa Cruz, 130 - Jd Caparroz - Catanduva/SP - CEP 15.805-160',
+      link: '#'
+    },
+    {
+      icon: MapPin,
+      title: 'Filial',
+      content: 'Rua Sete de Setembro, 1274 - Alto Higienópolis - CEP 15.805-070',
       link: '#'
     },
     {
@@ -49,7 +61,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="py-24 bg-weg-dark relative">
+    <section id="contato" className="py-12 bg-weg-dark relative">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-weg-yellow/5 rounded-full blur-3xl"></div>
@@ -71,11 +83,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
-          <div className="lg:col-span-2 space-y-6">
-            <h3 className="text-xl font-bold text-white mb-6">Informações de Contato</h3>
-            
+          <div className="space-y-4">
             {contactInfo.map((info, idx) => (
               <a
                 key={idx}
@@ -110,7 +120,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-3">
+          <div>
             <form onSubmit={handleSubmit} className="bg-weg-gray/50 rounded-2xl p-8 border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-6">Envie sua Mensagem</h3>
               

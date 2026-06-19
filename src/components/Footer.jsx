@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Globe, MessageCircle, Briefcase } from 'lucide-react';
+import logoMacias from '../assets/logo-macias.png';
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <img
-                src="/logo-macias.png"
+                src={logoMacias}
                 alt="Macias Eletrotécnica"
                 className="h-32 w-auto"
               />
@@ -65,7 +66,13 @@ const Footer = () => {
               <li>
                 <a href="tel:+551735249700" className="flex items-center gap-3 text-gray-400 hover:text-weg-yellow transition-colors">
                   <Phone size={16} />
-                  <span>(17) 3524-9700</span>
+                  <span>(17) 3524-9700 (Matriz)</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+551735223312" className="flex items-center gap-3 text-gray-400 hover:text-weg-yellow transition-colors">
+                  <Phone size={16} />
+                  <span>(17) 3522-3312 (Filial)</span>
                 </a>
               </li>
               <li>
@@ -76,7 +83,17 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>Catanduva, SP - Brasil</span>
+                <div className="text-sm">
+                  <p><strong className="text-white">Matriz:</strong> Rua Rosa Cruz, 130 - Jd Caparroz</p>
+                  <p className="text-xs">Catanduva/SP - CEP 15.805-160</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 text-gray-400">
+                <MapPin size={16} className="mt-1 flex-shrink-0" />
+                <div className="text-sm">
+                  <p><strong className="text-white">Filial:</strong> Rua Sete de Setembro, 1274</p>
+                  <p className="text-xs">Alto Higienópolis - CEP 15.805-070</p>
+                </div>
               </li>
             </ul>
           </div>

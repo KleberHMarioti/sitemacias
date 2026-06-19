@@ -1,4 +1,6 @@
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import heroBg from '../assets/hero-bg.png';
+import motorWeg from '../assets/motor-weg.jpg';
 
 const Hero = () => {
   return (
@@ -6,7 +8,7 @@ const Hero = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/hero-bg.png"
+          src={heroBg}
           alt="Motor elétrico WEG"
           className="w-full h-full object-cover"
         />
@@ -46,24 +48,6 @@ const Hero = () => {
                 Conhecer Serviços
               </a>
             </div>
-
-            {/* Trust badges */}
-            <div className="mt-12 flex flex-wrap items-center gap-8">
-              <div className="text-center">
-                <p className="text-3xl font-bold text-weg-yellow">25+</p>
-                <p className="text-sm text-gray-400">Anos de Experiência</p>
-              </div>
-              <div className="w-px h-12 bg-gray-700"></div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-weg-yellow">500+</p>
-                <p className="text-sm text-gray-400">Clientes Atendidos</p>
-              </div>
-              <div className="w-px h-12 bg-gray-700"></div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-weg-yellow">100%</p>
-                <p className="text-sm text-gray-400">Satisfação</p>
-              </div>
-            </div>
           </div>
 
           {/* Hero image */}
@@ -71,7 +55,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-weg-yellow/20 to-weg-accent/20 rounded-3xl blur-xl"></div>
               <img
-                src="/motor-weg.jpg"
+                src={motorWeg}
                 alt="Manutenção de Motores Macias"
                 className="relative rounded-2xl shadow-2xl w-full h-auto"
               />

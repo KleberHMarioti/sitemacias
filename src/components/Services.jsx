@@ -1,32 +1,35 @@
 import { Wrench, Zap, Settings, ArrowRight } from 'lucide-react';
+import motorWeg from '../assets/motor-weg.jpg';
+import transformador from '../assets/transformador.jpg';
+import pecas from '../assets/pecas.jpg';
 
 const services = [
   {
     icon: Wrench,
     title: 'Manutenção de Motores',
     description: 'Revisão, manutenção preventiva e corretiva de motores elétricos WEG e outras marcas. Troca de rolamentos, rebobinamento, usinagem e mais.',
-    image: '/motor-weg.jpg',
+    image: motorWeg,
     features: ['Revisão Completa', 'Troca de Rolamentos', 'Rebobinamento', 'Usinagem']
   },
   {
     icon: Settings,
     title: 'Manutenção de Transformadores',
-    description: 'Análise preventiva, preditiva e de óleo. Serviços de reparo com garantia e agilidade. Leva e traz inclusos.',
-    image: '/transformador.jpg',
-    features: ['Análise de Óleo', 'Preventiva/Preditiva', 'Reparo com Garantia', 'Leva e Traz']
+    description: 'Análise preventiva, preditiva e de óleo. Serviços de reparo com garantia e agilidade. Logística própria.',
+    image: transformador,
+    features: ['Análise de Óleo', 'Preventiva/Preditiva', 'Reparo com Garantia', 'Logística Própria']
   },
   {
     icon: Zap,
     title: 'Comércio de Equipamentos',
     description: 'Motores novos, ventiladores, rolamentos, terminais e peças para motores. Consulte preços e condições de pagamento.',
-    image: '/pecas.jpg',
+    image: pecas,
     features: ['Motores Novos', 'Peças Originais', 'Melhores Preços', 'Entrega Rápida']
   }
 ];
 
 const Services = () => {
   return (
-    <section id="servicos" className="py-24 bg-weg-dark relative overflow-hidden">
+    <section id="servicos" className="py-12 bg-weg-dark relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-20 right-0 w-96 h-96 bg-weg-yellow/5 rounded-full blur-3xl"></div>

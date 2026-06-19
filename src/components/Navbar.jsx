@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logoMacias from '../assets/logo-macias.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,22 +24,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-weg-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
-      {/* Top bar */}
-      <div className="bg-weg-dark border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-end items-center py-2 text-sm text-gray-300">
-            <a href="tel:+551735249700" className="flex items-center gap-2 hover:text-weg-yellow transition-colors">
-              <Phone size={14} />
-              <span>(17) 3524-9700</span>
-            </a>
-            <span className="mx-4 text-gray-600">|</span>
-            <a href="mailto:contato@maciaseletro.com.br" className="flex items-center gap-2 hover:text-weg-yellow transition-colors">
-              <Mail size={14} />
-              <span>contato@maciaseletro.com.br</span>
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* Top bar - removed */}
 
       {/* Main navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +33,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <a href="#inicio" className="flex items-center gap-3">
               <img
-                src="/logo-macias.png"
+                src={logoMacias}
                 alt="Macias Eletrotécnica"
                 className="h-20 w-auto"
               />

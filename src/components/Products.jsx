@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import { ArrowRight, Star, Truck, Shield, Clock } from 'lucide-react';
+import { Star, Shield } from 'lucide-react';
+import motorWeg from '../assets/motor-weg.jpg';
+import transformador from '../assets/transformador.jpg';
+import pecas from '../assets/pecas.jpg';
+import heroBg from '../assets/hero-bg.png';
 
 const products = [
   {
@@ -7,7 +11,7 @@ const products = [
     category: 'motores',
     name: 'Motor Elétrico WEG W22',
     description: 'Motor de indução trifásico de alta eficiência. Ideal para aplicações industriais.',
-    image: '/motor-weg.jpg',
+    image: motorWeg,
     specs: ['Potência: 1 a 500 CV', 'Tensão: 220/380V', 'Alta Eficiência'],
     badge: 'Mais Vendido'
   },
@@ -16,7 +20,7 @@ const products = [
     category: 'motores',
     name: 'Motor WEG Monofásico',
     description: 'Motor compacto para uso residencial e comercial. Baixo consumo de energia.',
-    image: '/motor-weg.jpg',
+    image: motorWeg,
     specs: ['Potência: 0,5 a 5 CV', 'Monofásico 127/220V', 'Silencioso'],
     badge: 'Econômico'
   },
@@ -25,7 +29,7 @@ const products = [
     category: 'transformadores',
     name: 'Transformador de Potência',
     description: 'Transformador para distribuição industrial. Alta confiabilidade e durabilidade.',
-    image: '/transformador.jpg',
+    image: transformador,
     specs: ['Potência: 10 a 2000 kVA', 'Alta Tensão', 'Isolamento Total'],
     badge: 'Industrial'
   },
@@ -34,7 +38,7 @@ const products = [
     category: 'solda',
     name: 'Máquina de Solda Inversora',
     description: 'Máquina de solda profissional para diversos tipos de eletrodos.',
-    image: '/pecas.jpg',
+    image: pecas,
     specs: ['Corrente: 200A a 500A', 'Multi-tensão', 'Portátil'],
     badge: 'Profissional'
   },
@@ -43,7 +47,7 @@ const products = [
     category: 'geradores',
     name: 'Gerador de Energia Diesel',
     description: 'Gerador para emergência e suprimento contínuo de energia.',
-    image: '/hero-bg.png',
+    image: heroBg,
     specs: ['Potência: 10 a 500 kVA', 'Motor Diesel', 'Automático'],
     badge: 'Emergência'
   },
@@ -52,7 +56,7 @@ const products = [
     category: 'pecas',
     name: 'Rolamentos e Peças',
     description: 'Rolamentos, ventiladores, terminais e peças originais para manutenção.',
-    image: '/pecas.jpg',
+    image: pecas,
     specs: ['Peças Originais', 'Diversas Marcas', 'Entrega Imediata'],
     badge: 'Original'
   }
@@ -75,7 +79,7 @@ const Products = () => {
     : products.filter(p => p.category === selectedCategory);
 
   return (
-    <section id="produtos" className="py-24 bg-gradient-to-b from-weg-dark to-weg-gray relative">
+    <section id="produtos" className="py-12 bg-gradient-to-b from-weg-dark to-weg-gray relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -153,7 +157,7 @@ const Products = () => {
                 {product.description}
               </p>
 
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2">
                 {product.specs.map((spec, idx) => (
                   <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                     <Star size={12} className="text-weg-yellow" />
@@ -161,27 +165,6 @@ const Products = () => {
                   </li>
                 ))}
               </ul>
-
-              <a href="#contato" className="inline-flex items-center gap-2 text-weg-yellow font-medium text-sm group-hover:gap-3 transition-all">
-                Solicitar Orçamento
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          ))}
-        </div>
-
-        {/* Benefits */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: Truck, title: 'Entrega Rápida', desc: 'Em toda região' },
-            { icon: Shield, title: 'Garantia', desc: 'Produtos certificados' },
-            { icon: Clock, title: 'Suporte 24h', desc: 'Assistência técnica' },
-            { icon: Star, title: 'Qualidade', desc: 'Marcas top' }
-          ].map((benefit, idx) => (
-            <div key={idx} className="text-center p-4 bg-weg-gray/50 rounded-xl border border-gray-800">
-              <benefit.icon size={28} className="text-weg-yellow mx-auto mb-3" />
-              <p className="text-white font-semibold text-sm">{benefit.title}</p>
-              <p className="text-gray-400 text-xs">{benefit.desc}</p>
             </div>
           ))}
         </div>
